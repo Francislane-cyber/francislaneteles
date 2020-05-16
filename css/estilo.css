@@ -1,8 +1,38 @@
-body { 
-    background: rgb(206, 96, 84); 
+body {
+    background-image: url('https://i.pinimg.com/originals/8d/e8/53/8de853c35c19b77f6a5570dce0f3c8d8.jpg');
+    background-size: auto 130vh; 
+    font-family: Gabelisa;
+    height: 100vh;
   }
   
-  .menu{ 
-    background-color :rgb(201, 101, 179) ;
+  .menu {
+    background-color: white;
   }
   
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+   list-style: none; 
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle, 
+  .site-title {
+    color: red;
+    text-align: center;
+  }
+  
+  .site-subtitle {
+   font-style: italic;
+  }
