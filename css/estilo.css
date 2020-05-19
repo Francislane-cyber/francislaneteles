@@ -1,21 +1,61 @@
-body {
-  background-image: url('https://i.pinimg.com/originals/8d/e8/53/8de853c35c19b77f6a5570dce0f3c8d8.jpg');
-  background-size: auto 130vh; 
-  font-family: Gabelisa;
-  height: 100vh;
+/* Soft reset do css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-image: url('https://image.freepik.com/free-photo/light-bulbs-glowing-one-different-idea-cactus-blue-flower-pot-white-background_52494-9.jpg');
+  background-size: auto 100vh; 
+  font-family: Gabelisa;
+  height: 100vh;
+  font-size: 10xp
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media( min-width: 400px ){ 
+body {
+  font-size: 14px; 
+      }
+}
+
+/* breakpoint - ponto de quebra que se ajusta*/
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+header{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centralizou meu nome*/
+}
+
+
 .menu {
-  background-color: white;
+  background-color: rgb(80, 165, 204);
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
+  
 }
 
 .menu li {
  list-style: none; 
+}
+
+.menu a {
+  background-color: rgb(98, 168, 145);
+  display: block;
+  padding: 10px 20px;
 }
 
 a {
@@ -29,10 +69,19 @@ a:hover {
 
 .site-subtitle, 
 .site-title {
-  color: red;
+  color: rgba(10, 190, 245, 0.822);
   text-align: center;
+  
+}
+.site-title {
+  font-size: 4em;
 }
 
 .site-subtitle {
  font-style: italic;
+}
+
+.img-portfolio{
+  height: 180px;
+  width:180px;
 }
