@@ -132,7 +132,7 @@ a:hover {
   height: 180px;
   width:240px;
   object-fit: cover;/* mesma porporção acima p todos */
-  object-position:1250xp 1250xp;/* tamanho da my image*/
+  /*object-position:1250xp 1250xp;/* tamanho/posição da my image*/
   border-radius: 0%;
 }
 
