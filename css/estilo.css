@@ -8,9 +8,9 @@
 body {
   background-image: url('https://image.freepik.com/free-photo/light-bulbs-glowing-one-different-idea-cactus-blue-flower-pot-white-background_52494-9.jpg');
   background-size: auto 100vh; 
-  font-family: Gabelisa;
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
-  font-size: 10xp
+  font-size: 12xp
 }
 
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
@@ -27,6 +27,13 @@ body {
   }
 }
 
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
 header{
   height: 100vh;
   display: flex;
@@ -36,7 +43,7 @@ header{
 
 
 .menu {
-  background-color: rgb(80, 165, 204);
+  background-color: rgb(24, 175, 202);
   position: fixed;
   width: 100vw;
   top: 0;
@@ -53,7 +60,8 @@ header{
 }
 
 .menu a {
-  background-color: rgb(98, 168, 145);
+
+  background-color: whitesmoke;
   display: block;
   padding: 10px 20px;
 }
@@ -75,13 +83,56 @@ a:hover {
 }
 .site-title {
   font-size: 4em;
+  font-family: 'Dancing Script', cursive;
 }
 
 .site-subtitle {
  font-style: italic;
+ font-family: 'Amatic SC', cursive;
+ line-height:1.8em ;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2{
+  font-family: 'Amatic SC', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio{
   height: 180px;
-  width:180px;
+  width:240px;
+  object-fit: cover;/* mesma porporção acima p todos */
+  object-position:1250xp 1250xp;/* tamanho da my image*/
+  border-radius: 0%;
 }
+
