@@ -47,6 +47,7 @@ header{
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1; 
 }
 
 .menu ul {
@@ -60,10 +61,17 @@ header{
 }
 
 .menu a {
-
   background-color: whitesmoke;
   display: block;
   padding: 10px 20px;
+  transition: background-color 1s, color 1s;/* tempo de mudança de cor qnd passa o mouse*/
+
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: rgb(131, 204, 176);
+  color: whitesmoke;
 }
 
 a {
@@ -71,8 +79,28 @@ a {
   text-decoration: none;
 }
 
+
 a:hover {
   text-decoration: underline;
+}
+
+.titulo{
+  transform: scale(0.2) translateY(50vh); /* escala e movimento de zoom */
+  opacity: 0 ; /* transparencia*/
+  /*transition: all 2s;/* qnd passar mouse*/
+  animation:linear 1s animar forwards ;
+  
+}
+
+@keyframes animar {/* criando nome animação*/
+  0%{ /*from*/
+    transform: scale(0.2) translateY(50vh);/* valores iniciais*/
+    opacity: 0 ;
+   }
+  100%{/*to*/
+  transform: scale(1) translateY(0); /* escala e movimento de zoom */
+  opacity: 1 ; /* transparencia*/
+  }
 }
 
 .site-subtitle, 
@@ -92,16 +120,73 @@ a:hover {
  line-height:1.8em ;
 }
 
+.sobre,
+.contato,
 .portfolio {
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+@media (min-width: 1200px) {
+  .container {/* limitação dos elementos*/
+    margin-left: auto;/* margem automatica*/
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
+.contato h2,
 .portfolio h2{
   font-family: 'Amatic SC', cursive;
   color: whitesmoke;
   margin-bottom: 1.5em;
   font-size: 2em;
+}
+
+.sobre p {
+color: black;
+margin-bottom:1.4em ;
+text-indent: 1.4em;/* recuo/parágrafo */
+text-align: justify;
+
+}
+
+/*.sobre a {
+  color: white;
+  text-decoration: underline;
+}
+
+.sobre a:hover {
+  background-color: cyan;
+  text-decoration: none;
+  color: magenta;
+}
+qnd tiver LINK acima
+
+.sobre .foto{
+  float: left  ou right; Imagem  e texto do lado
+  margem-left: 2em;
+}
+texto do lado
+
+.sobre .foto img{
+  border-radius: 50%;
+}
+imagem arredondada. 
+
+*/
+
+.sobre .foto {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin-left: 2em;
+}
+
+@media (min-width: 600px) {
+  .sobre .foto {
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    float: right;
+  }
 }
 
 .portfolio .grid {
@@ -128,11 +213,31 @@ a:hover {
   text-align: center;
 }
 
-.img-portfolio{
+.img-portfolio {
   height: 180px;
-  width:240px;
+  width: 240px;
   object-fit: cover;/* mesma porporção acima p todos */
-  /*object-position:1250xp 1250xp;/* tamanho/posição da my image*/
-  border-radius: 0%;
+  object-position: left bottom;/* tamanho posição da my image qnd aperto*/
+  transition: transform 500ms;
+ /*border-radius: 0%; arredondar imagem*/
 }
 
+.img-portfolio:hover{
+  transform: scale(1.2) rotateX(15deg);
+}
+
+.contato .icons {
+  text-align: center;/* Centraliza apenas os iconees*/
+}
+
+.contato a { /* mesmas caracteristicas fonte do portifolio*/
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 2s; /* velocidade aparece sombra*/ 
+}
+
+.contato a:active,/*qnd clica no elemento no celular /touch*/
+.contato a:hover  {
+  text-decoration: none;/* tirar o _ da tag a do html do contato*/
+  text-shadow: 4px 4px 10px rgba(182, 96, 216, 0.900);/* sombra no elemento p dizer que é acessável, controla no pixel. RGBA : a: transparencia*/
+}
