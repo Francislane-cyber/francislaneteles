@@ -8,21 +8,26 @@
 body {
   background-image: url('https://image.freepik.com/free-photo/light-bulbs-glowing-one-different-idea-cactus-blue-flower-pot-white-background_52494-9.jpg');
   background-size: auto 100vh; 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'roboto', sans-serif;
   height: 100vh;
-  font-size: 12xp
+  font-size: 12xp;
+  overflow-x: hidden;
 }
 
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
 @media( min-width: 400px ){ 
 body {
-  font-size: 14px; 
+  
+  font-size: 15px; 
       }
 }
 
 /* breakpoint - ponto de quebra que se ajusta*/
 @media (min-width: 600px) {
   body {
+    background-attachment: fixed;
+    background-size: cover;
+  /* esses dois acimas extenderam demais minha foto*/
     font-size: 18px;
   }
 }
@@ -43,7 +48,7 @@ header{
 
 
 .menu {
-  background-color: rgb(24, 175, 202);
+  background-color: rgb(217, 177, 233);
   position: fixed;
   width: 100vw;
   top: 0;
@@ -70,7 +75,7 @@ header{
 
 .menu a:active,
 .menu a:hover {
-  background-color: rgb(131, 204, 176);
+  background-color: rgb(221, 211, 226);
   color: whitesmoke;
 }
 
@@ -105,7 +110,7 @@ a:hover {
 
 .site-subtitle, 
 .site-title {
-  color: rgba(10, 190, 245, 0.822);
+  color: rgba(166, 75, 202, 0.822);
   text-align: center;
   
 }
@@ -145,7 +150,7 @@ a:hover {
 }
 
 .sobre p {
-color: black;
+color: rgb(164, 109, 196);
 margin-bottom:1.4em ;
 text-indent: 1.4em;/* recuo/parágrafo */
 text-align: justify;
@@ -214,8 +219,8 @@ imagem arredondada.
 }
 
 .img-portfolio {
-  height: 180px;
-  width: 240px;
+  height: 230px;
+  width: 230px;
   object-fit: cover;/* mesma porporção acima p todos */
   object-position: left bottom;/* tamanho posição da my image qnd aperto*/
   transition: transform 500ms;
